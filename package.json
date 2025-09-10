@@ -1,0 +1,17 @@
+{
+	"name": "bun-server-template",
+	"module": "src/server.ts",
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"private": true,
+	"scripts": {
+		"build-client": "bun build ./src/client.ts --outdir build",
+		"start-server": "bun run ./src/server.ts",
+		"serve": "bun build-client && bun start-server"
+	},
+	"type": "module"
+}
