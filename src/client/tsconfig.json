@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "ES2020", // Target a slightly older version for browser compatibility
+		"module": "ESNext",
+		"lib": [
+			"ESNext",
+			"dom",
+			"dom.iterable"
+		],
+		"isolatedModules": true,
+		// Best practices
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		// Some stricter flags (disabled by default)
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noPropertyAccessFromIndexSignature": false
+	}
+}

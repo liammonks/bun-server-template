@@ -13,6 +13,7 @@ socket.addEventListener("open", event => {
 
 socket.addEventListener("close", event => {
 	console.log("websocket disconnected");
+
 });
 
 socket.addEventListener("error", event => {
