@@ -1,6 +1,5 @@
 {
 	"name": "bun-server-template",
-	"module": "src/server.ts",
 	"devDependencies": {
 		"@types/bun": "latest"
 	},
@@ -9,9 +8,9 @@
 	},
 	"private": true,
 	"scripts": {
-		"build-client": "bun build ./src/client.ts --outdir build",
-		"start-server": "bun run ./src/server.ts",
-		"serve": "bun build-client && bun start-server"
-	},
-	"type": "module"
+		"build": "NODE_ENV=production bun build ./src/client/client.ts --outdir ./build --entry-naming [dir]/bundle.[ext]",
+		"build-dev": "NODE_ENV=development bun build ./src/client/client.ts --outdir ./build --entry-naming [dir]/bundle.[ext] --watch",
+		"server": "bun run --watch ./src/server/server.ts",
+		"dev": "bun run ./src/dev/dev.ts"
+	}
 }
